@@ -22,7 +22,8 @@ app.use("/api/user", require("./routes/user.routes"))
 app.use("/api/admin", require("./routes/admin.routes"))
 
 app.use("*", (req, res) => {
-    res.status(404).json({ message: "resource not found" })
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
+    res.status(404).json({ message: "resource Not foudn" })
 })
 
 app.use((err, req, res, next) => {
