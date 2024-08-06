@@ -9,7 +9,7 @@ require("dotenv").config({ path: "./.env" })
 const app = express()
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "dist")))
-app.use(express.static("uploads"))
+app.use(express.static(path.join(__dirname, "uploads")))
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
