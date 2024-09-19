@@ -11,7 +11,6 @@ exports.getAllproducts = asyncHandler(async (req, res) => {
 exports.productsdetails = asyncHandler(async (req, res) => {
     const { id } = req.params
     const result = await Products.findById(id)
-    // .populate("")
     res.status(200).json({ message: "blog fetch success", result })
 })
 exports.addProducts = asyncHandler(async (req, res) => {
