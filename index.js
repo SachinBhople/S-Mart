@@ -25,10 +25,11 @@ app.use("/api/admin", require("./routes/admin.routes"))
 
 app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"))
-    res.status(404).json({ message: "resource Not foudn" })
+
 })
 
 app.use((err, req, res, next) => {
+    console.log(err);
     res.status(500).json({ message: err.message || "something went wrong" })
 })
 

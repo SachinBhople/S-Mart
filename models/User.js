@@ -7,11 +7,11 @@ const userSchma = new mongooses.Schema({
     },
     cname: {
         type: String,
-        // required: true
+       
     },
     owner: {
         type: String,
-        // required: true
+        
     },
     email: {
         type: String,
